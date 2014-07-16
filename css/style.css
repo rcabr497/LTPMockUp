@@ -202,6 +202,9 @@ nav {
   border-radius: 3px;
   float: right; }
 
+.mixtape-download {
+  margin-bottom: 30px; }
+
 .mixtape-download-list {
   list-style: none;
   margin: 0px;
@@ -213,8 +216,6 @@ nav {
     margin-bottom: 5px;
     text-align: center; }
     .mixtape-download-list li img {
-      width: 208px;
-      height: 208px;
       margin-bottom: 10px;
       border: 1px solid #ededed; }
   .mixtape-download-list li:nth-child(3n) {
@@ -225,6 +226,48 @@ nav {
     color: white;
     border-radius: 3px;
     text-align: center; }
+  .mixtape-download-list .mixtape-single img {
+    width: 100%; }
+
+.home-blog {
+  margin-bottom: 30px; }
+
+.home-blog-list {
+  padding: 0px;
+  margin: 0px;
+  list-style: none; }
+  .home-blog-list li {
+    width: 100%;
+    margin-bottom: 13px;
+    clear: both;
+    display: block; }
+    .home-blog-list li img {
+      float: left;
+      width: 30%;
+      margin: 0px 15px 0px 0px; }
+    .home-blog-list li p {
+      clear: both; }
+
+.home-video {
+  margin-bottom: 30px; }
+
+.home-video-list {
+  padding: 0px;
+  margin: 0px;
+  list-style: none; }
+  .home-video-list li {
+    float: left;
+    width: 32%;
+    margin-right: 2%; }
+    .home-video-list li img {
+      width: 100%; }
+  .home-video-list li:nth-child(3n) {
+    margin-right: 0px; }
+
+.full-add {
+  margin-bottom: 30px; }
+  .full-add img {
+    width: 100%; }
 
 /* Staff Page Style */
 .staff-list {
