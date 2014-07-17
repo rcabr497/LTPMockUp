@@ -20,6 +20,18 @@
     *zoom: 1;
 }
 
+/* Mobile Breakpoints */
+@mixin breakpoint($point) {
+  @if $point == tablet {
+    @media (max-width: 702px) { @content; }
+  }
+  @else if $point == mobile {
+    @media (max-width: 520px) { @content; }
+  }
+  @else if $point == mobile-menu {
+    @media (max-width: 702px) { @content; }
+  }
+}
 
 
 
@@ -159,13 +171,6 @@ nav {
 }
 
 /* Main Content Styles */
-.main-content {
-	background: white;
-	margin-top: 30px;
-	-webkit-box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.14);
--moz-box-shadow:    0px 0px 3px 0px rgba(50, 50, 50, 0.14);
-box-shadow:         0px 0px 3px 0px rgba(50, 50, 50, 0.14);
-}
 
 /* Page Styles */
 .page-title {
@@ -173,6 +178,11 @@ box-shadow:         0px 0px 3px 0px rgba(50, 50, 50, 0.14);
 	margin-top: 5px;
 }
 
+.home-content {
+	@include breakpoint(tablet) {
+		width: 100%;
+	}
+}
 /* Home Page Styles */
 .home-box {
 	padding: 10px;
@@ -203,6 +213,10 @@ box-shadow:         0px 0px 3px 0px rgba(50, 50, 50, 0.14);
 		width: 48%;
 		float: left;
 		margin: 0px 2% 13px 0px;
+		@include breakpoint(mobile) {
+			width: 100%;
+			margin-bottom: 10px;
+		}
 
 		img {
 			float: left;
@@ -217,8 +231,9 @@ box-shadow:         0px 0px 3px 0px rgba(50, 50, 50, 0.14);
 		}
 	}
 
-	li:nth-child(2n) {
+	li:nth-child(2n+1) {
 		margin-right: 0px;
+		clear: both;
 	}
 }
 
@@ -234,6 +249,10 @@ box-shadow:         0px 0px 3px 0px rgba(50, 50, 50, 0.14);
 		width: 48%;
 		float: left;
 		margin: 0px 2% 13px 0px;
+		@include breakpoint(mobile) {
+			width: 100%;
+			margin-bottom: 10px;
+		}
 
 		img {
 			float: left;
@@ -284,8 +303,15 @@ box-shadow:         0px 0px 3px 0px rgba(50, 50, 50, 0.14);
 		width: 32%;
 		float: left;
 		margin-right: 2%;
-		margin-bottom: 5px;
+		margin-bottom: 4px;
 		text-align: center;
+		@include breakpoint(mobile) {
+			width: 49%;
+			margin-bottom: 10px;
+			li:nth-child(2n+1) {
+				margin-right: 2%;
+			}
+		}
 		img {
 			margin-bottom: 10px;
 			border: 1px solid #ededed;
@@ -295,6 +321,9 @@ box-shadow:         0px 0px 3px 0px rgba(50, 50, 50, 0.14);
 
 	li:nth-child(3n) {
 		margin-right: 0px;
+		@include breakpoint(mobile) {
+			margin-right: 2%;
+		}
 	}
 
 	.download-mixtape {
@@ -326,6 +355,10 @@ box-shadow:         0px 0px 3px 0px rgba(50, 50, 50, 0.14);
 		margin-bottom: 13px;
 		clear:both;
 		display: block;
+		@include breakpoint(mobile) {
+			width: 100%;
+			margin-bottom: 10px;
+		}
 
 		img {
 			float: left;
@@ -352,6 +385,10 @@ box-shadow:         0px 0px 3px 0px rgba(50, 50, 50, 0.14);
 		float: left;
 		width: 32%;
 		margin-right: 2%;
+		@include breakpoint(mobile) {
+			width: 100%;
+			margin-bottom: 10px;
+		}
 
 		img {
 			width: 100%;
@@ -576,7 +613,7 @@ box-shadow:         0px 0px 3px 0px rgba(50, 50, 50, 0.14);
 			}
 			
 			.album-name {
-				font-size: 1em;
+				font-size: .9em;
 			}
 
 			.album-location {
