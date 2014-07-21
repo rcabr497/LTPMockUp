@@ -119,11 +119,21 @@ body {
 	width: 69%;
 	float:left;
 	margin-right: 3%;
+	margin-top: 30px;
+
+	@include breakpoint(tablet) {
+		width: 100%;
+	}
 }
 
 .sidebar {
+	margin-top: 30px;
 	width: 28%;
 	float: right;
+
+	@include breakpoint(tablet) {
+		width: 100%;
+	}
 }
 
 /* Top Bar Style */
@@ -168,6 +178,49 @@ nav {
 .menu {
 	background: $light-grey;
 	padding: 7px 0px;
+
+	@include breakpoint(tablet) {
+		padding: 0px;
+	}
+
+	.row {
+		@include breakpoint(tablet) {
+		padding: 0px;
+		}
+	}
+}
+
+/* Mobile Menu Styles */
+
+#mobile-menu-btn {
+	color: white;
+	background: $red;
+	width: 100%;
+	padding: 10px 0px;
+	text-align: center;
+}
+.menu nav {
+	@include breakpoint(tablet) {
+		display: none;
+	}
+}
+
+#mobile-menu {
+	display: none;
+
+	@include breakpoint(tablet) {
+		display: none;
+	}
+}
+
+#mobile-menu-btn {
+	display:none;
+	font-size: 18px;
+	text-decoration: none;
+
+	@include breakpoint(tablet) {
+		display: inline-block;
+	}
 }
 
 /* Main Content Styles */
@@ -175,7 +228,10 @@ nav {
 /* Page Styles */
 .page-title {
 	border-bottom: 3px solid $red;
-	margin-top: 5px;
+	margin-top: 0px;
+	padding-bottom: 10px;
+	line-height: 100%;
+
 }
 
 .home-content {
@@ -272,7 +328,7 @@ nav {
 	}
 }
 .slider {
-	margin: 30px 0px;
+	margin-top: 30px;
 	img {
 		width: 100%;
 	}
@@ -299,19 +355,19 @@ nav {
 	list-style: none;
 	margin:0px;
 	padding: 0px;
+	
 	li {
 		width: 32%;
 		float: left;
 		margin-right: 2%;
 		margin-bottom: 4px;
 		text-align: center;
-		@include breakpoint(mobile) {
-			width: 49%;
-			margin-bottom: 10px;
-			li:nth-child(2n+1) {
-				margin-right: 2%;
-			}
+
+		@include breakpoint(tablet) {
+			width: 48%;
+			margin-right: 4%;
 		}
+		
 		img {
 			margin-bottom: 10px;
 			border: 1px solid #ededed;
@@ -319,10 +375,11 @@ nav {
 
 	}
 
-	li:nth-child(3n) {
+	li:nth-child(2n+2) {
 		margin-right: 0px;
+
 		@include breakpoint(mobile) {
-			margin-right: 2%;
+			margin-right: 0%;
 		}
 	}
 
@@ -341,8 +398,13 @@ nav {
 	}
 }
 
+
 .home-blog {
 	margin-bottom: 30px;
+
+	@include breakpoint(tablet) {
+		width: 100%;
+	}
 }
 
 .home-blog-list {
@@ -355,6 +417,7 @@ nav {
 		margin-bottom: 13px;
 		clear:both;
 		display: block;
+
 		@include breakpoint(mobile) {
 			width: 100%;
 			margin-bottom: 10px;
@@ -374,6 +437,10 @@ nav {
 
 .home-video {
 	margin-bottom: 30px;
+
+	@include breakpoint(tablet) {
+		width: 100%;
+	}
 }
 
 .home-video-list {
@@ -385,9 +452,11 @@ nav {
 		float: left;
 		width: 32%;
 		margin-right: 2%;
+
 		@include breakpoint(mobile) {
-			width: 100%;
+			width: 48%;
 			margin-bottom: 10px;
+			margin-right: 4%;
 		}
 
 		img {
@@ -397,6 +466,16 @@ nav {
 
 	li:nth-child(3n) {
 		margin-right: 0px; 
+
+		@include breakpoint(mobile) {
+			margin-right: 4%;
+		}
+	}
+
+	li:nth-child(2n+2) {
+		@include breakpoint(mobile) {
+			margin-right: 0px;
+		}
 	} 
 
 	.video-name {
@@ -408,7 +487,6 @@ nav {
 	img {
 		width: 100%;
 	}
-
 	margin-bottom: 30px;
 }
 /* Staff Page Style */
@@ -417,6 +495,16 @@ nav {
 	list-style: none;
 	text-align: center;
 
+	.single-staff {
+		width: 23.5%;
+		float: left;
+		margin-right: 2%;
+
+		p {
+			margin: 0px;
+			padding: 10px;
+		}
+	}
 	li {
 		margin-bottom: 10px;
 		p {
@@ -557,15 +645,20 @@ nav {
 
 /* Blog Page Styles */
 .single-post {
-
+	width: 100%;
+	margin-bottom: 15px;
 	.subtitle {
 		padding: 0px 0px 7px;
-		margin: 0px 0px 7px;
+		margin-bottom: 7px;
 		border-bottom: 1px solid #d8d8d8;
 		line-height: 100%;
 	}
 	.single-post-info {
 		width: 100%;
+		background-color: $red;
+		border-radius:4px;
+		color:white;
+		padding: 5px 10px;
 		margin-bottom: 7px;
 		div {
 			float: left;
@@ -577,6 +670,16 @@ nav {
 		float: left;
 		margin: 0px 15px 20px 0px;
 	}
+
+	.post-more-btn {
+		background-color: $light-grey;
+		color: white;
+		padding: 5px 7px;
+		text-decoration: none;
+		border-radius: 4px;
+		float: right;
+		margin-top: 15px;
+	}
 }
 /* Sidebar Styles */
 .ads {
@@ -585,10 +688,32 @@ nav {
 	margin-top: 0px;
 	img {
 		width: 100%;
+
+		@include breakpoint(tablet) {
+			width: 100%;
+		}
 	}
 
 	li {
 		margin-bottom: 30px;
+
+	}
+
+	@include breakpoint(tablet) {
+		li:nth-child(1) {
+			width: 48%;
+			float: left;
+		}
+
+		li:nth-child(2) {
+			width: 48%;
+			float: right;
+
+		}
+
+		li:nth-child(2)::after {
+			clear: both;
+		}
 	}
 }
 
@@ -642,3 +767,165 @@ nav {
 
 	}
 }
+
+/* Music Page Style */
+
+.music-singles {
+	margin-bottom: 30px;
+
+	.home-more-btn {
+		margin-top: 10px;
+	}
+}
+
+.music-single-list {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+
+	li {
+		width: 100%;
+		padding: 4px 0px;
+	}
+
+	.download-btn {
+		float:right;
+		font-size: .8em;
+	}
+
+}
+
+
+.page-search {
+	width: 100%;
+	margin-bottom: 20px;
+
+	.search-music {
+	width: 68%;
+	margin-right: 2%;
+	float:left;
+	font-size: 1.5em;
+	padding: 18px 0px;
+	text-indent: 10px;
+	border-radius: 4px;
+	border: none;
+	background: #eee;
+	}
+
+	.search-music:focus {
+		outline: none;
+		border:none;
+	}
+
+	.submit-search {
+		width: 30%;
+		background-color: $red;
+		padding: 16px 0px;
+		border: 2px solid $dark-red;
+		outline: none;
+		color: white;
+		border-radius: 4px;
+		font-size: 1.5em;
+		font-weight: lighter;
+	}
+}
+
+/* Mixes Page Style */
+
+.single-mixtape {
+	width: 100%;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+
+	&:last-of-kind {
+		border:none;
+	}
+	img {
+		width: 20%;
+		float: left;
+		margin-right: 2%
+	}
+
+	.mixtape-info {
+		width: 78%;
+		float: right;
+	}
+
+	.mixtape-title {
+		width: 100%;
+		font-weight: bolder;
+		font-size: 1.05em;
+	}
+
+	a {
+		float: right;
+		margin-left: 10px;
+		text-decoration: none;
+	}
+
+	.listen-mixtape-btn, .download-mixtape-btn {
+		padding: 5px 7px; 
+		background-color: $light-grey;
+		color: white;
+		position: relative;
+		top: 40px;
+		border-radius: 3px;
+	}
+
+	.mixtape-detail {
+		ul {
+			margin:0px;
+			padding: 0px;
+			list-style: none;
+		}
+	}
+}
+
+/* Events Page Style */
+.events-page-list {
+	ul {
+		list-style: none;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	li {
+		width: 49%;
+		float: left;
+		margin-right: 2%;
+		margin-bottom: 20px;
+		img {
+			width: 25%;
+			float: left;
+			margin-right: 2%;
+		}
+
+
+		@include breakpoint(mobile) {
+		width: 100%;
+	}
+	}
+
+	li:nth-child(2n+2) {
+			margin-right: 0px;
+	}
+
+	.event-detail {
+		width: 73%;
+		float: left;
+
+		li {
+			width: 100%;
+			margin-bottom: 5px;
+			line-height: 100%;
+		}
+
+		.event-name {
+			font-weight: bolder;
+			font-size: 1.1em;
+		}
+	}
+}
+
+

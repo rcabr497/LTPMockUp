@@ -79,11 +79,19 @@ body {
 .content {
   width: 69%;
   float: left;
-  margin-right: 3%; }
+  margin-right: 3%;
+  margin-top: 30px; }
+  @media (max-width: 702px) {
+    .content {
+      width: 100%; } }
 
 .sidebar {
+  margin-top: 30px;
   width: 28%;
   float: right; }
+  @media (max-width: 702px) {
+    .sidebar {
+      width: 100%; } }
 
 /* Top Bar Style */
 .top-bar {
@@ -117,12 +125,46 @@ nav {
 .menu {
   background: #373737;
   padding: 7px 0px; }
+  @media (max-width: 702px) {
+    .menu {
+      padding: 0px; } }
+  @media (max-width: 702px) {
+    .menu .row {
+      padding: 0px; } }
+
+/* Mobile Menu Styles */
+#mobile-menu-btn {
+  color: white;
+  background: #a60c0c;
+  width: 100%;
+  padding: 10px 0px;
+  text-align: center; }
+
+@media (max-width: 702px) {
+  .menu nav {
+    display: none; } }
+
+#mobile-menu {
+  display: none; }
+  @media (max-width: 702px) {
+    #mobile-menu {
+      display: none; } }
+
+#mobile-menu-btn {
+  display: none;
+  font-size: 18px;
+  text-decoration: none; }
+  @media (max-width: 702px) {
+    #mobile-menu-btn {
+      display: inline-block; } }
 
 /* Main Content Styles */
 /* Page Styles */
 .page-title {
   border-bottom: 3px solid #a60c0c;
-  margin-top: 5px; }
+  margin-top: 0px;
+  padding-bottom: 10px;
+  line-height: 100%; }
 
 @media (max-width: 702px) {
   .home-content {
@@ -197,7 +239,7 @@ nav {
     margin-right: 0px; }
 
 .slider {
-  margin: 30px 0px; }
+  margin-top: 30px; }
   .slider img {
     width: 100%; }
 
@@ -222,20 +264,18 @@ nav {
     margin-right: 2%;
     margin-bottom: 4px;
     text-align: center; }
-    @media (max-width: 520px) {
+    @media (max-width: 702px) {
       .mixtape-download-list li {
-        width: 49%;
-        margin-bottom: 10px; }
-        .mixtape-download-list li li:nth-child(2n+1) {
-          margin-right: 2%; } }
+        width: 48%;
+        margin-right: 4%; } }
     .mixtape-download-list li img {
       margin-bottom: 10px;
       border: 1px solid #ededed; }
-  .mixtape-download-list li:nth-child(3n) {
+  .mixtape-download-list li:nth-child(2n+2) {
     margin-right: 0px; }
     @media (max-width: 520px) {
-      .mixtape-download-list li:nth-child(3n) {
-        margin-right: 2%; } }
+      .mixtape-download-list li:nth-child(2n+2) {
+        margin-right: 0%; } }
   .mixtape-download-list .download-mixtape {
     padding: 5px;
     background-color: #373737;
@@ -247,6 +287,9 @@ nav {
 
 .home-blog {
   margin-bottom: 30px; }
+  @media (max-width: 702px) {
+    .home-blog {
+      width: 100%; } }
 
 .home-blog-list {
   padding: 0px;
@@ -270,6 +313,9 @@ nav {
 
 .home-video {
   margin-bottom: 30px; }
+  @media (max-width: 702px) {
+    .home-video {
+      width: 100%; } }
 
 .home-video-list {
   padding: 0px;
@@ -281,12 +327,19 @@ nav {
     margin-right: 2%; }
     @media (max-width: 520px) {
       .home-video-list li {
-        width: 100%;
-        margin-bottom: 10px; } }
+        width: 48%;
+        margin-bottom: 10px;
+        margin-right: 4%; } }
     .home-video-list li img {
       width: 100%; }
   .home-video-list li:nth-child(3n) {
     margin-right: 0px; }
+    @media (max-width: 520px) {
+      .home-video-list li:nth-child(3n) {
+        margin-right: 4%; } }
+  @media (max-width: 520px) {
+    .home-video-list li:nth-child(2n+2) {
+      margin-right: 0px; } }
 
 .full-add {
   margin-bottom: 30px; }
@@ -298,6 +351,13 @@ nav {
   padding-left: 0px;
   list-style: none;
   text-align: center; }
+  .staff-list .single-staff {
+    width: 23.5%;
+    float: left;
+    margin-right: 2%; }
+    .staff-list .single-staff p {
+      margin: 0px;
+      padding: 10px; }
   .staff-list li {
     margin-bottom: 10px; }
     .staff-list li p {
@@ -397,20 +457,35 @@ nav {
     top: 28px; }
 
 /* Blog Page Styles */
-.single-post .subtitle {
-  padding: 0px 0px 7px;
-  margin: 0px 0px 7px;
-  border-bottom: 1px solid #d8d8d8;
-  line-height: 100%; }
-.single-post .single-post-info {
+.single-post {
   width: 100%;
-  margin-bottom: 7px; }
-  .single-post .single-post-info div {
+  margin-bottom: 15px; }
+  .single-post .subtitle {
+    padding: 0px 0px 7px;
+    margin-bottom: 7px;
+    border-bottom: 1px solid #d8d8d8;
+    line-height: 100%; }
+  .single-post .single-post-info {
+    width: 100%;
+    background-color: #a60c0c;
+    border-radius: 4px;
+    color: white;
+    padding: 5px 10px;
+    margin-bottom: 7px; }
+    .single-post .single-post-info div {
+      float: left;
+      margin-right: 20px; }
+  .single-post .post-img {
     float: left;
-    margin-right: 20px; }
-.single-post .post-img {
-  float: left;
-  margin: 0px 15px 20px 0px; }
+    margin: 0px 15px 20px 0px; }
+  .single-post .post-more-btn {
+    background-color: #373737;
+    color: white;
+    padding: 5px 7px;
+    text-decoration: none;
+    border-radius: 4px;
+    float: right;
+    margin-top: 15px; }
 
 /* Sidebar Styles */
 .ads {
@@ -419,8 +494,20 @@ nav {
   margin-top: 0px; }
   .ads img {
     width: 100%; }
+    @media (max-width: 702px) {
+      .ads img {
+        width: 100%; } }
   .ads li {
     margin-bottom: 30px; }
+  @media (max-width: 702px) {
+    .ads li:nth-child(1) {
+      width: 48%;
+      float: left; }
+    .ads li:nth-child(2) {
+      width: 48%;
+      float: right; }
+    .ads li:nth-child(2)::after {
+      clear: both; } }
 
 .sidebar-photo {
   margin-bottom: 35px; }
@@ -457,3 +544,112 @@ nav {
   .side-album-btn a {
     color: white;
     text-decoration: none; }
+
+/* Music Page Style */
+.music-singles {
+  margin-bottom: 30px; }
+  .music-singles .home-more-btn {
+    margin-top: 10px; }
+
+.music-single-list {
+  padding: 0px;
+  margin: 0px;
+  list-style: none; }
+  .music-single-list li {
+    width: 100%;
+    padding: 4px 0px; }
+  .music-single-list .download-btn {
+    float: right;
+    font-size: .8em; }
+
+.page-search {
+  width: 100%;
+  margin-bottom: 20px; }
+  .page-search .search-music {
+    width: 68%;
+    margin-right: 2%;
+    float: left;
+    font-size: 1.5em;
+    padding: 18px 0px;
+    text-indent: 10px;
+    border-radius: 4px;
+    border: none;
+    background: #eee; }
+  .page-search .search-music:focus {
+    outline: none;
+    border: none; }
+  .page-search .submit-search {
+    width: 30%;
+    background-color: #a60c0c;
+    padding: 16px 0px;
+    border: 2px solid #800909;
+    outline: none;
+    color: white;
+    border-radius: 4px;
+    font-size: 1.5em;
+    font-weight: lighter; }
+
+/* Mixes Page Style */
+.single-mixtape {
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 10px; }
+  .single-mixtape:last-of-kind {
+    border: none; }
+  .single-mixtape img {
+    width: 20%;
+    float: left;
+    margin-right: 2%; }
+  .single-mixtape .mixtape-info {
+    width: 78%;
+    float: right; }
+  .single-mixtape .mixtape-title {
+    width: 100%;
+    font-weight: bolder;
+    font-size: 1.05em; }
+  .single-mixtape a {
+    float: right;
+    margin-left: 10px;
+    text-decoration: none; }
+  .single-mixtape .listen-mixtape-btn, .single-mixtape .download-mixtape-btn {
+    padding: 5px 7px;
+    background-color: #373737;
+    color: white;
+    position: relative;
+    top: 40px;
+    border-radius: 3px; }
+  .single-mixtape .mixtape-detail ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none; }
+
+/* Events Page Style */
+.events-page-list ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px; }
+.events-page-list li {
+  width: 49%;
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 20px; }
+  .events-page-list li img {
+    width: 25%;
+    float: left;
+    margin-right: 2%; }
+  @media (max-width: 520px) {
+    .events-page-list li {
+      width: 100%; } }
+.events-page-list li:nth-child(2n+2) {
+  margin-right: 0px; }
+.events-page-list .event-detail {
+  width: 73%;
+  float: left; }
+  .events-page-list .event-detail li {
+    width: 100%;
+    margin-bottom: 5px;
+    line-height: 100%; }
+  .events-page-list .event-detail .event-name {
+    font-weight: bolder;
+    font-size: 1.1em; }
