@@ -480,7 +480,8 @@ nav {
       margin-right: 20px; }
   .single-post .post-img {
     float: left;
-    margin: 0px 15px 20px 0px; }
+    margin: 0px 15px 20px 0px;
+    width: 35%; }
   .single-post .post-more-btn {
     background-color: #373737;
     color: white;
@@ -622,10 +623,12 @@ nav {
     position: relative;
     top: 40px;
     border-radius: 3px; }
-  .single-mixtape .mixtape-detail ul {
-    margin: 0px;
-    padding: 0px;
-    list-style: none; }
+  .single-mixtape .mixtape-detail {
+    width: 40%; }
+    .single-mixtape .mixtape-detail ul {
+      margin: 0px;
+      padding: 0px;
+      list-style: none; }
 
 /* Events Page Style */
 .events-page-list ul {
@@ -648,7 +651,8 @@ nav {
   margin-right: 0px; }
 .events-page-list .event-detail {
   width: 73%;
-  float: left; }
+  float: left;
+  margin: 0px; }
   .events-page-list .event-detail li {
     width: 100%;
     margin-bottom: 5px;
@@ -656,3 +660,66 @@ nav {
   .events-page-list .event-detail .event-name {
     font-weight: bolder;
     font-size: 1.1em; }
+
+.event-detail-btn {
+  background-color: #373737;
+  color: white;
+  padding: 5px 7px;
+  font-size: .8em;
+  float: right;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none; }
+
+/* Single Event Page Styles */
+.single-event-detail {
+  width: 100%;
+  margin-right: 2%;
+  float: left; }
+
+.single-event-detail-table {
+  width: 49%;
+  margin-right: 2%;
+  float: left; }
+  .single-event-detail-table tr {
+    height: 25px; }
+  .single-event-detail-table .event-detail-left {
+    width: 50%;
+    text-align: right;
+    font-weight: bolder;
+    padding-right: 10px; }
+  .single-event-detail-table .event-detail-right {
+    width: 50%; }
+
+.single-event-flyer {
+  width: 49%;
+  float: left; }
+  .single-event-flyer img {
+    width: 100%; }
+
+.single-event-map {
+  width: 100%; }
+  .single-event-map img {
+    width: 100%; }
+
+.single-event-share {
+  text-align: center;
+  padding: 20px 0px; }
+
+/* Single Mixtape Page Style */
+.mixtape-cover {
+  width: 30%;
+  float: left; }
+
+.mixtape-detail {
+  width: 70%;
+  float: left;
+  font-size: 1em; }
+  .mixtape-detail ul {
+    list-style: none;
+    margin: 0px 0px 0px 20px;
+    padding: 0px; }
+
+.mixtape-soundcloud-player {
+  width: 100%;
+  margin-top: 20px; }

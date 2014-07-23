@@ -673,6 +673,7 @@ nav {
 	.post-img {
 		float: left;
 		margin: 0px 15px 20px 0px;
+		width: 35%;
 	}
 
 	.post-more-btn {
@@ -878,6 +879,7 @@ nav {
 	}
 
 	.mixtape-detail {
+		width: 40%;
 		ul {
 			margin:0px;
 			padding: 0px;
@@ -918,6 +920,7 @@ nav {
 	.event-detail {
 		width: 73%;
 		float: left;
+		margin: 0px;
 
 		li {
 			width: 100%;
@@ -932,4 +935,86 @@ nav {
 	}
 }
 
+.event-detail-btn {
+	background-color: $light-grey;
+	color: white;
+	padding: 5px 7px;
+	font-size: .8em;
+	float: right;
+	border-radius: 4px;
+	text-align: center;
+	text-decoration: none;
+}
+
+/* Single Event Page Styles */
+
+.single-event-detail{
+	width: 100%;
+	margin-right: 2%;
+	float: left;
+}
+.single-event-detail-table {
+	width: 49%;
+	margin-right: 2%;
+	float: left;
+
+	tr {
+		height: 25px;
+	}
+
+	.event-detail-left {
+		width: 50%;
+		text-align: right;
+		font-weight: bolder;
+		padding-right: 10px;
+	}
+
+	.event-detail-right {
+		width: 50%;
+	}
+}
+
+.single-event-flyer {
+	width: 49%;
+	float: left;
+
+	img {
+		width: 100%;
+	}
+}
+
+
+.single-event-map {
+	width: 100%;
+	img {
+		width: 100%;
+	}
+}
+
+.single-event-share {
+	text-align: center;
+	padding: 20px 0px;
+}
+/* Single Mixtape Page Style */
+
+.mixtape-cover {
+	width: 30%;
+	float: left;
+}
+
+.mixtape-detail {
+	width: 70%;
+	float: left;
+	font-size: 1em;
+	ul {
+		list-style: none;
+		margin: 0px 0px 0px 20px;
+		padding: 0px;
+	}
+}
+
+.mixtape-soundcloud-player {
+	width: 100%;
+	margin-top: 20px;
+}
 
