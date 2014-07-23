@@ -754,3 +754,26 @@ nav {
   border-radius: 4px;
   float: right;
   margin-top: 10px; }
+
+/* Video Page Style */
+.video-page-list {
+  margin: 0px;
+  padding: 0px;
+  list-style: none; }
+  .video-page-list li {
+    width: 32%;
+    margin-right: 2%;
+    float: left; }
+    .video-page-list li img {
+      width: 100%; }
+    .video-page-list li p {
+      margin-top: 5px;
+      font-size: 1.1em; }
+  .video-page-list li:nth-child(3n+3) {
+    margin-right: 0px; }
+
+/* Single Video Page Styles */
+.single-video {
+  margin-top: 20px; }
+  .single-video img {
+    width: 100%; }
