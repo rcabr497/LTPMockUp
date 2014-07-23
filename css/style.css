@@ -460,29 +460,29 @@ nav {
     top: 28px; }
 
 /* Blog Page Styles */
-.single-post {
+.single-post-summary {
   width: 100%;
   margin-bottom: 15px; }
-  .single-post .subtitle {
+  .single-post-summary .subtitle {
     padding: 0px 0px 7px;
     margin-bottom: 7px;
     border-bottom: 1px solid #d8d8d8;
     line-height: 100%; }
-  .single-post .single-post-info {
+  .single-post-summary .single-post-info {
     width: 100%;
     background-color: #a60c0c;
     border-radius: 4px;
     color: white;
     padding: 5px 10px;
     margin-bottom: 7px; }
-    .single-post .single-post-info div {
+    .single-post-summary .single-post-info div {
       float: left;
       margin-right: 20px; }
-  .single-post .post-img {
+  .single-post-summary .post-img {
     float: left;
     margin: 0px 15px 20px 0px;
     width: 35%; }
-  .single-post .post-more-btn {
+  .single-post-summary .post-more-btn {
     background-color: #373737;
     color: white;
     padding: 5px 7px;
@@ -723,3 +723,34 @@ nav {
 .mixtape-soundcloud-player {
   width: 100%;
   margin-top: 20px; }
+
+/* Single Post Page Style */
+.single-post .single-post-info {
+  width: 100%;
+  background-color: #a60c0c;
+  border-radius: 4px;
+  color: white;
+  padding: 5px 10px;
+  margin-bottom: 20px; }
+  .single-post .single-post-info div {
+    float: left;
+    margin-right: 20px; }
+
+.post-thumb {
+  float: left;
+  width: 300px;
+  margin: 0px 20px 20px 0px; }
+
+/* Comments Style */
+.comments {
+  margin-top: 30px; }
+
+.post-comment-btn {
+  padding: 10px 12px;
+  font-size: 1.2em;
+  background-color: #373737;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  float: right;
+  margin-top: 10px; }
