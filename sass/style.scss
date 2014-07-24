@@ -190,6 +190,38 @@ nav {
 	}
 }
 
+.child-nav {
+	display: none;
+	width: 175px;
+	background-color: $light-grey;
+	margin: 0px;
+	padding: 0px;
+
+	li {
+		padding: 7px 0px;
+	}
+
+}
+
+.parent-nav:hover {
+	.child-nav {
+		display: inline-block;
+		position: absolute;
+		top: 225px;
+		left: 220px;
+		li {
+			width: 200px;
+			margin: 0px 0px 0px 10px;
+
+		}
+
+		&:last-child {
+			margin: 0px;
+			padding: 0px;
+		}
+	}
+}
+
 /* Mobile Menu Styles */
 
 #mobile-menu-btn {
@@ -597,7 +629,21 @@ nav {
 	}
 }
 
+.dj-mix-list {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
 
+	li {
+		width: 100%;
+		padding: 4px 0px;
+	}
+
+	.download-btn {
+		float:right;
+		font-size: .8em;
+	}
+}
 .download-btn {
 	background-color: $red;
 	color: white;
@@ -855,6 +901,10 @@ nav {
 	.mixtape-info {
 		width: 78%;
 		float: right;
+
+		a {
+			margin-top: 38px;
+		}
 	}
 
 	.mixtape-title {
@@ -1077,6 +1127,10 @@ nav {
 			margin-top: 5px;
 			font-size: 1.1em;
 		}
+		a {
+			color: black;
+			text-decoration: none;
+		}
 	}
 
 	li:nth-child(3n+3) {
@@ -1090,5 +1144,70 @@ nav {
 
 	img {
 		width: 100%;
+	}
+}
+
+/* Genre Page Style */
+.single-song {
+	width: 100%;
+	margin-bottom: 10px;	
+	padding-bottom: 10px;
+	border-bottom: 1px solid #eee;
+
+	img {
+		float: left;
+		width: 15%;
+		margin-right: 2%;
+	}
+
+	h3 {
+		margin: 0px;
+	}
+
+	p {
+		margin: 5px 0px;
+	}
+
+	.single-song-type {
+		color: $red;
+
+	}
+
+	
+	.single-song-btns {
+		width: 118px;
+		float: right;
+		
+
+		.play-song, .download-song {
+			padding: 3px 5px;
+			background-color: $light-grey;
+			color: white;
+			border-radius: 3px;
+			text-decoration: none;
+		}
+	}
+}
+
+.single-song:last-of-kind {
+	border:none;
+}
+
+/* Gallery Page Style */
+
+.gallery-list {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	
+	li {
+		width: 49%;
+		float: left;
+		margin-right: 2%;
+		background: #eee;
+		padding: 10px;
+		border: 1px solid #D8D8D8;
+		margin-bottom: 15px;
+		border-radius: 3px;
 	}
 }

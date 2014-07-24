@@ -132,6 +132,27 @@ nav {
     .menu .row {
       padding: 0px; } }
 
+.child-nav {
+  display: none;
+  width: 175px;
+  background-color: #373737;
+  margin: 0px;
+  padding: 0px; }
+  .child-nav li {
+    padding: 7px 0px; }
+
+.parent-nav:hover .child-nav {
+  display: inline-block;
+  position: absolute;
+  top: 225px;
+  left: 220px; }
+  .parent-nav:hover .child-nav li {
+    width: 200px;
+    margin: 0px 0px 0px 10px; }
+  .parent-nav:hover .child-nav:last-child {
+    margin: 0px;
+    padding: 0px; }
+
 /* Mobile Menu Styles */
 #mobile-menu-btn {
   color: white;
@@ -421,6 +442,17 @@ nav {
     width: 20%;
     text-align: right; }
 
+.dj-mix-list {
+  padding: 0px;
+  margin: 0px;
+  list-style: none; }
+  .dj-mix-list li {
+    width: 100%;
+    padding: 4px 0px; }
+  .dj-mix-list .download-btn {
+    float: right;
+    font-size: .8em; }
+
 .download-btn {
   background-color: #a60c0c;
   color: white;
@@ -608,6 +640,8 @@ nav {
   .single-mixtape .mixtape-info {
     width: 78%;
     float: right; }
+    .single-mixtape .mixtape-info a {
+      margin-top: 38px; }
   .single-mixtape .mixtape-title {
     width: 100%;
     font-weight: bolder;
@@ -769,6 +803,9 @@ nav {
     .video-page-list li p {
       margin-top: 5px;
       font-size: 1.1em; }
+    .video-page-list li a {
+      color: black;
+      text-decoration: none; }
   .video-page-list li:nth-child(3n+3) {
     margin-right: 0px; }
 
@@ -777,3 +814,47 @@ nav {
   margin-top: 20px; }
   .single-video img {
     width: 100%; }
+
+/* Genre Page Style */
+.single-song {
+  width: 100%;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee; }
+  .single-song img {
+    float: left;
+    width: 15%;
+    margin-right: 2%; }
+  .single-song h3 {
+    margin: 0px; }
+  .single-song p {
+    margin: 5px 0px; }
+  .single-song .single-song-type {
+    color: #a60c0c; }
+  .single-song .single-song-btns {
+    width: 118px;
+    float: right; }
+    .single-song .single-song-btns .play-song, .single-song .single-song-btns .download-song {
+      padding: 3px 5px;
+      background-color: #373737;
+      color: white;
+      border-radius: 3px;
+      text-decoration: none; }
+
+.single-song:last-of-kind {
+  border: none; }
+
+/* Gallery Page Style */
+.gallery-list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px; }
+  .gallery-list li {
+    width: 49%;
+    float: left;
+    margin-right: 2%;
+    background: #eee;
+    padding: 10px;
+    border: 1px solid #D8D8D8;
+    margin-bottom: 15px;
+    border-radius: 3px; }
